@@ -1,0 +1,68 @@
+1. How do lists and tuples differ in terms of mutability and performance? When would you choose one over the other?
+Ans). Lists: Lists are mutable, which mean we can modify them after creating them. We can add, remove, or change elements of list.
+Tuples: Tuples are immutable, which means once they are created, we cannot change their elements.
+In terms of performance,
+· Lists: Since lists are mutable, they have additional overhead for maintaining that mutability, which can make them slightly slower than tuples in some cases.
+· Tuples: Because tuples are immutable, they can be more memory efficient and faster to access than lists.
+Hence,
+List is mutable , which mean its elements can be changed like elements can be added , removed or can be modified , while Tuple is immutable , which mean its elements cannot be changed after creation.
+List require more memory as they have to store extra information so that it can support any modification unlike Tuple which is stored in memory efficient way which makes it faster.
+When would you choose one over the other :-
+· When we need a collection of items that may change (adding/removing elements), there we can use list.
+· When we need to ensure that the collection of items remains constant then we use tuples.
+
+2. Explain how Python handles type conversion between different data types, such as between integers and floats or between strings and lists.
+Ans). Python handles type conversion in two ways:
+# Implicit conversion 
+Python automatically converts one data type to another when needed, without user intervention.
+When performing operations between an integer and a float, Python converts the integer to a float automatically.
+# Explicit conversion 
+Explicit conversion requires manually using Python’s built-in functions to convert between types.
+*Integer and float
+Explicitly converting a float to an integer removes the decimal part (truncation).
+x = 5.8
+y = int(x)  # Converts to 5
+print(y)
+*String to List
+A string can be converted into a list of characters.
+s = "hello"
+lst = list(s)  # Converts "hello" to ['h', 'e', 'l', 'l', 'o']
+print(lst)
+*List to String
+lst = ['h', 'e', 'l', 'l', 'o']
+s = ''.join(lst)  # Converts list to "hello"
+print(s)
+# If conversion is not possible, Python raises a ValueError.
+To avoid errors, use try-except blocks.
+
+3. Take a number and use the += operator to increase its value by 10.
+Ans). num = int(input("Enter a number: "))
+num += 10
+print(num)
+
+4. Write a Python program to check if a given year is a leap year or not.
+Ans). year = int(input("Enter a year: "))
+if year % 4 == 0 or year % 100!= 0 and year % 400 ==0:
+print(year, "is a leap year.")
+else:
+print(year, "is not a leap year.")
+
+5 . Write a program that asks the user to enter their marks and displays their grade:
+• 90-100: A
+• 80-89: B
+• 70-79: C
+• 60-69: D
+• Below 60: F
+Ans). grade = int(input("Enter your grade: "))
+if grade>=90:
+print("A")
+elif grade>=80:
+print("B")
+elif grade>=70:
+print("C")
+elif grade>=60:
+print("D")
+else:
+print("F")
+
+
